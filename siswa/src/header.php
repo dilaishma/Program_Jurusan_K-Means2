@@ -22,7 +22,7 @@ while($dataNamaCluster = mysqli_fetch_array($queryNamaCluster)){
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Penentuan jurusan pada SMKN 1 muaro jambi dengan menggunakan metode k-means clustering</title>
+  <title>Clustering Data Pasien Puskesmas Ngemplak, Boyolali menggunakan metode k-means clustering</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->

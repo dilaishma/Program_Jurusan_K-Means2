@@ -7,7 +7,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        K-MEANS CLUSTERING PENENTUAN JURUSAN
+        K-MEANS CLUSTERING PENYAKIT DATA PASIEN
       </h1>
     </section>
 
@@ -27,7 +27,7 @@
           </div>
         </div>
         <div class="box-body">
-          <img src="../bg3.jpg" width="100%">
+          <img src="../bg.jpg" width="100%">
         </div>
         <!-- /.box-body -->
         <div class="box-footer">

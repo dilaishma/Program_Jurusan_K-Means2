@@ -2,7 +2,7 @@
     <div class="pull-right hidden-xs">
       <b>K-MEANS</b> CLUSTERING
     </div>
-    <strong><a href="index.php">K-MEANS CLUSTERING</a>.</strong> Penentuan jurusan pada SMKN 1 muaro jambi.
+    <strong><a href="index.php">K-MEANS CLUSTERING</a>.</strong> Penentuan Cluster Penyakit PAsien Rawat Jalan Puskesmas Kecamatan Ngemplak, Boyolali.
 </footer>
         </form>
       </div>

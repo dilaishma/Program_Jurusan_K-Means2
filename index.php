@@ -10,7 +10,7 @@ include 'koneksi.php';
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Penentuan jurusan pada SMKN 1 muaro jambi dengan menggunakan metode k-means clustering</title>
+  <title>Clustering Penyakit Pasien Rawat Jalan Puskesmas Kecamtan Ngemplak, Boyolali</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -66,7 +66,7 @@ include 'koneksi.php';
   <section id="hero" class="d-flex align-items-center">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
       <h1>Selamat Datang di</h1>
-      <h1><span>SISTEM PENENTUAN JURUSAN PADA SMKN 1 MUARO JAMBI DENGAN K-MEANS CLUSTERING</span></h1>
+      <h1><span>SISTEM CLUSTERING PASIEN RAWAT JALAN PUSKESMAS NGEMPLAK</span></h1>
     </div>
   </section><!-- End Hero -->
 
@@ -78,7 +78,7 @@ include 'koneksi.php';
         <strong><span>K-MEANS CLUSTERING</span></strong>.
       </div>
       <div class="credits">
-        <a href="index.php">PENENTUAN JURUSAN PADA SMKN 1 MUARO JAMBI</a>
+        <a href="index.php">CLUSTERING PASIEN RAWAT JALAN PUSKESMAS NGEMPLAK</a>
       </div>
     </div>
   </footer><!-- End Footer -->
