@@ -31,7 +31,7 @@ if(isset($_POST['simpan'])){
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
-          <h3 class="box-title">Tambah Data Siswa</h3>
+          <h3 class="box-title">Tambah Data Penyakit</h3>
           <?php
           $id = $_GET['nis'];
           $query = mysqli_query($koneksi, "SELECT data_nilai.*, data_siswa.* FROM data_nilai, data_siswa WHERE data_nilai.nis = data_siswa.nis AND data_siswa.nis = '$id'");
@@ -45,12 +45,12 @@ if(isset($_POST['simpan'])){
         <div class="box-body">
           <form action="" method="POST">
             <table class="table table-bordered" id="example1" width="100%" cellspacing="0">
-              <tr bgcolor="#6699FF"><td><h4 align="center">DATA DIRI SISWA</h4></tr>
+              <tr bgcolor="#6699FF"><td><h4 align="center">DATA PENYAKIT</h4></tr>
             </table>
             <table class="table table-no-bordered" id="example1" width="100%" cellspacing="0">
-              <tr><td>NISN : <input type="text" name="nis" class="form-control" value="<?= $data['nis'] ?>" readonly></td></tr>
-              <tr><td>Nama Lengkap : <input type="text" onkeypress="return event.charCode < 48 || event.charCode  >57" name="nama_siswa" class="form-control" value="<?= $data['nama_siswa'] ?>" placeholder="Masukan Nama Siswa" required></td></tr>
-              <tr><td>Alamat : <input type="text" name="alamat_siswa" class="form-control" value="<?= $data['alamat_siswa'] ?>" placeholder="Masukan Alamat Siswa" required></td></tr>
+              <tr><td>ID Penyakit : <input type="text" name="nis" class="form-control" value="<?= $data['nis'] ?>" readonly></td></tr>
+              <tr><td>NamaPenyakit : <input type="text" onkeypress="return event.charCode < 48 || event.charCode  >57" name="nama_siswa" class="form-control" value="<?= $data['nama_siswa'] ?>" placeholder="Masukan Nama Penyakit" required></td></tr>
+              <tr><td>Deskripsi Penyakit : <input type="text" name="alamat_siswa" class="form-control" value="<?= $data['alamat_siswa'] ?>" placeholder="Masukan Deskripsi Penyakit" required></td></tr>
             </table>
             <div class="form-group">
               <button type="submit" class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm' name="simpan"><span aria-hidden="true"></span>Simpan</button>

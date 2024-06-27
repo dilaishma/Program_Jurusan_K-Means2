@@ -33,13 +33,15 @@ if(isset($_POST['simpan'])){
     $c3 = mysqli_real_escape_string($koneksi, $_POST['c3']);
     $c4 = mysqli_real_escape_string($koneksi, $_POST['c4']);
     $c5 = mysqli_real_escape_string($koneksi, $_POST['c5']);
+    $c6 = mysqli_real_escape_string($koneksi, $_POST['c6']);
+    $c6 = mysqli_real_escape_string($koneksi, $_POST['c7']);
     
     // Mulai transaksi
     mysqli_begin_transaction($koneksi);
 
     try {
       $simpan1 = mysqli_query($koneksi, "INSERT INTO data_siswa (nis, nama_siswa, alamat_siswa) VALUES ('$nis', '$nama_siswa', '$alamat_siswa')");
-      $simpan2 = mysqli_query($koneksi, "INSERT INTO data_nilai (nis, c1, c2, c3, c4, c5) VALUES ('$nis', '$c1', '$c2', '$c3', '$c4', '$c5')");
+      $simpan2 = mysqli_query($koneksi, "INSERT INTO data_nilai (nis, c1, c2, c3, c4, c5, c6, c7) VALUES ('$nis', '$c1', '$c2', '$c3', '$c4', '$c5', '$c6', '$c7')");
 
       if ($simpan1 && $simpan2) {
         $query = mysqli_query($koneksi, "SELECT max(id_nilai) as idMax FROM data_nilai");
@@ -111,6 +113,8 @@ if(isset($_POST['simpan'])){
               <td>Jumlah Usia 25-45 tahun : <input type="number" min="0" max="1000" name="c3" class="form-control" placeholder="Masukan Jumlah Usia 25-45 tahun :" required></td>
               <td>Jumlah Usia 46 - 65 tahun : <input type="number" min="0" max="1000" name="c4" class="form-control" placeholder="Masukan Jumlah Usia 46-65 tahun :" required></td>
               <td>Jumlah Usia > 65 tahun : <input type="number" min="0" max="1000" name="c5" class="form-control" placeholder="Masukan Jumlah Usia > 65 tahun :" required></td>
+              <td>Jumlah Perempuan :  <input type="number" name="c6" class="form-control" value="<?= $data['c6'] ?>" placeholder="Masukan Jumlah Usia Perempuan : " required></td>
+              <td>Jumlah Laki - laki :  <input type="number" name="c7" class="form-control" value="<?= $data['c7'] ?>" placeholder="Masukan Jumlah Usia Laki - laki : " required></td>
             </tr>
           </table>
           <div class="form-group">

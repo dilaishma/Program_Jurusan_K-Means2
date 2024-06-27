@@ -20,8 +20,10 @@ if (isset($_POST['simpan'])) {
     $c3 = $_POST['c3'];
     $c4 = $_POST['c4'];
     $c5 = $_POST['c5'];
+    $c6 = $_POST['c6'];
+    $c7 = $_POST['c7'];
 
-    $nilai = [$c1, $c2, $c3, $c4, $c5];
+    $nilai = [$c1, $c2, $c3, $c4, $c5, $c6, $c7];
 
     if (!preg_match("/^[0-9]+$/", $nis)) {
         echo "<script>alert('Input NIS hanya boleh berupa angka!');window.location='siswa_edit.php'</script>";
@@ -35,8 +37,8 @@ if (isset($_POST['simpan'])) {
         $stmt1->bind_param("ssi", $nama, $alamat, $nis);
         $simpan1 = $stmt1->execute();
 
-        $stmt2 = $koneksi->prepare("UPDATE data_nilai SET c1 = ?, c2 = ?, c3 = ?, c4 = ?, c5 = ? WHERE nis = ?");
-        $stmt2->bind_param("iiiiii", $c1, $c2, $c3, $c4, $c5, $nis);
+        $stmt2 = $koneksi->prepare("UPDATE data_nilai SET c1 = ?, c2 = ?, c3 = ?, c4 = ?, c5 = ?, c6 = ?, c7 = ? WHERE nis = ?");
+        $stmt2->bind_param("iiiiiiii", $c1, $c2, $c3, $c4, $c5, $c6, $c7, $nis);
         $simpan2 = $stmt2->execute();
 
         if ($simpan1 && $simpan2) {
@@ -96,6 +98,8 @@ if (isset($_POST['simpan'])) {
                             <td>Jumlah Usia 24-45 tahun :  <input type="number" name="c3" class="form-control" value="<?= $data['c3'] ?>" placeholder="Masukan Jumlah Usia 25-45 tahun : " required></td>
                             <td>Jumlah Usia 45-64 tahun :  <input type="number" name="c4" class="form-control" value="<?= $data['c4'] ?>" placeholder="Masukan Jumlah Usia 45-64 tahun : " required></td>
                             <td>Jumlah Usia > 65 tahun :  <input type="number" name="c5" class="form-control" value="<?= $data['c5'] ?>" placeholder="Masukan Jumlah Usia >65 tahun : " required></td>
+                            <td>Jumlah Perempuan :  <input type="number" name="c6" class="form-control" value="<?= $data['c6'] ?>" placeholder="Masukan Jumlah Perempuan: " required></td>
+                            <td>Jumlah Laki - laki :  <input type="number" name="c7" class="form-control" value="<?= $data['c7'] ?>" placeholder="Masukan Jumlah Laki - laki : " required></td>
                         </tr>
                     </table>
                     <div class="form-group">

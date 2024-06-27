@@ -9,7 +9,7 @@ include 'koneksi.php';
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Penentuan jurusan pada SMKN 1 muaro jambi dengan menggunakan metode k-means clustering</title>
+  <title>Penentuan kategori penyakit pasien rawat jalan Puskesmas Ngemplak dengan menggunakan metode k-means clustering</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -72,7 +72,7 @@ include 'koneksi.php';
 
         <div class="section-title">
           <h2>PENGUMUMAN</h2>
-          <h3>HASIL PENENTUAN <span>JURUSAN</span></h3>
+          <h3>HASIL PENENTUAN <span>KATEGORI</span></h3>
         </div>
         <div class="row">
           <div data-aos="zoom-in" data-aos-delay="100">
@@ -100,14 +100,16 @@ include 'koneksi.php';
                 <table class="table table-bordered" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>NIS</th>
-                      <th>Nama Siswa</th>
-                      <th>B INDO</th>
-                      <th>B INGGRIS</th>
-                      <th>MTK</th>
-                      <th>FISIKA</th>
-                      <th>BIOLOGI</th>
-                      <th>Jurusan</th>
+                      <th>ID Penyakit</th>
+                      <th>Nama Penyakit</th>
+                      <th>Usia 0-11 tahun</th>
+                      <th>Usia 12-25 tahun</th>
+                      <th>Usia 26-45 tahun</th>
+                      <th>Usia 46-65 tahun</th>
+                      <th>Usia > tahun</th>
+                      <th>Perempuan</th>
+                      <th>Laki - laki</th>
+                      <th>Kategori</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -153,6 +155,8 @@ include 'koneksi.php';
                       <td><?= $data['c3'] ?></td>
                       <td><?= $data['c4'] ?></td>
                       <td><?= $data['c5'] ?></td>
+                      <td><?= $data['c6'] ?></td>
+                      <td><?= $data['c7'] ?></td>
                       <td><?= $jurusan ?></td>
                     </tr>
                     <?php } ?>
@@ -223,7 +227,7 @@ include 'koneksi.php';
         <strong><span>K-MEANS CLUSTERING</span></strong>.
       </div>
       <div class="credits">
-        <a href="index.php">PENENTUAN JURUSAN PADA SMKN 1 MUARO JAMBI</a>
+        <a href="index.php">PENENTUAN KATEGORI PENYAKIT PUSKESMAS NGEMPLAK</a>
       </div>
     </div>
   </footer><!-- End Footer -->

@@ -32,14 +32,16 @@ include 'src/header.php';
             <table class="table table-bordered" id="example1" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th>#</th>
-                  <th>NIS</th>
-                  <th>Nama Siswa</th>
-                  <th>B INDO</th>
-                  <th>B INGGRIS</th>
-                  <th>MTK</th>
-                  <th>FISIKA</th>
-                  <th>BIOLOGI</th>
+                <th>#</th>
+                <th>ID Penyakit</th>
+                  <th>Nama Cluster</th>
+                  <th>0-11 tahun</th>
+                  <th>12-24 tahun</th>
+                  <th>25-45 tahun</th>
+                  <th>45-65 tahun</th>
+                  <th>> 65 tahun</th>
+                  <th>Perempuan</th>
+                  <th>Laki-laki</th>
                 </tr>
               </thead>
               <tbody>

@@ -11,7 +11,7 @@ $pdf->AddPage();
 $pdf->SetFont('Times','B',12);
 $pdf->Image('../logo1.png',1,1,2,2);
 $pdf->SetX(4);            
-$pdf->MultiCell(19.5,0.5,'LAPORAN DATA HASIL PENENTUAN JURUSAN DENGAN METODE KMEANS CLUSTERING',0,'L');    
+$pdf->MultiCell(19.5,0.5,'LAPORAN DATA HASIL PENENTUAN CLUSTER PENYAKIT PASIEN RAWAT JALAN PUSKESMAS NGEMPLAK',0,'L');    
 $pdf->SetFont('Arial','B',10);
 $pdf->SetX(4);
 $pdf->MultiCell(19.5,0.5,'Telpon : ',0,'L');
@@ -31,14 +31,14 @@ $pdf->SetFont('Arial','B',10);
 $pdf->Cell(5,0.7,"Di cetak pada : ".date("D-d/m/Y"),0,0,'C');
 $pdf->ln(1);
 $pdf->SetFont('Arial','B',8);
-$pdf->Cell(2.5, 0.8, 'NIS', 1, 0, 'C');
-$pdf->Cell(6, 0.8, 'Nama', 1, 0, 'C');
-$pdf->Cell(2, 0.8, 'B INDO', 1, 0, 'C');
-$pdf->Cell(3, 0.8, 'B INGGRIS', 1, 0, 'C');
-$pdf->Cell(2, 0.8, 'MTK', 1, 0, 'C');
-$pdf->Cell(3, 0.8, 'FISIKA', 1, 0, 'C');
-$pdf->Cell(3, 0.8, 'BIOLOGI', 1, 0, 'C');
-$pdf->Cell(4, 0.8, 'Jurusan', 1, 0, 'C');
+$pdf->Cell(2.5, 0.8, 'ID Penyakit', 1, 0, 'C');
+$pdf->Cell(6, 0.8, 'Nama Penyakit', 1, 0, 'C');
+$pdf->Cell(2, 0.8, 'Jumlah Usia 0-11 tahun', 1, 0, 'C');
+$pdf->Cell(3, 0.8, 'Jumlah Usia 12-25 tahun', 1, 0, 'C');
+$pdf->Cell(2, 0.8, 'Jumlah Usia 26-45 tahun', 1, 0, 'C');
+$pdf->Cell(3, 0.8, 'JUmlah Usia 46 - 65 tahun', 1, 0, 'C');
+$pdf->Cell(3, 0.8, 'Jumlah Usia > 65 tahun', 1, 0, 'C');
+$pdf->Cell(4, 0.8, 'Kategori', 1, 0, 'C');
 $pdf->ln();
 
 $no=1;
@@ -59,10 +59,6 @@ while($lihat=mysqli_fetch_array($query)){
         $jurusan = $ArrayNamaCluster[1];
     }elseif($lihat['Cluster'] == "Cluster-3"){
         $jurusan = $ArrayNamaCluster[2];
-    }elseif($lihat['Cluster'] == "Cluster-4"){
-        $jurusan = $ArrayNamaCluster[3];
-    }elseif($lihat['Cluster'] == "Cluster-5"){
-        $jurusan = $ArrayNamaCluster[4];
     }
 
     $pdf->Cell(2.5, 0.8, $lihat['nis'] , 1, 0, 'C');
@@ -77,7 +73,7 @@ while($lihat=mysqli_fetch_array($query)){
     $no++;
 }
 
-$pdf->Output("laporan_data_hasil_jurusan.pdf","I");
+$pdf->Output("laporan_data_hasil_cluster.pdf","I");
 
 ?>
 

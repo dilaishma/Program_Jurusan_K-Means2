@@ -126,11 +126,11 @@ while($dataNamaCluster = mysqli_fetch_array($queryNamaCluster)){
         <li class="treeview">
           <a href="#">
             <i class="fa fa-user"></i>
-            <span>SISWA</span>
+            <span>PENYAKIT</span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="data_siswa.php"><i class="fa fa-circle-o"></i>DATA DIRI</a></li>
-            <li><a href="data_nilai.php"><i class="fa fa-circle-o"></i>DATA NILAI</a></li>
+            <li><a href="data_siswa.php"><i class="fa fa-circle-o"></i>PENYAKIT</a></li>
+            <li><a href="data_nilai.php"><i class="fa fa-circle-o"></i>DETAIL DATA PENYAKIT</a></li>
           </ul>
         </li>
         <li>
@@ -156,7 +156,7 @@ while($dataNamaCluster = mysqli_fetch_array($queryNamaCluster)){
             <span>LAPORAN</span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="laporan_siswa.php"><i class="fa fa-circle-o"></i>SISWA</a></li>
+            <li><a href="laporan_siswa.php"><i class="fa fa-circle-o"></i>PENYAKIT</a></li>
             <li><a href="laporan_hasil.php"><i class="fa fa-circle-o"></i>HASIL</a></li>
           </ul>
         </li>

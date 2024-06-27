@@ -16,7 +16,7 @@
       
       <div class="row">
         <div class="col-lg-3 col-4">
-          <div class="small-box bg-info">
+          <div class="small-box bg-danger">
             <div class="inner">
               <?php
               $query = mysqli_query($koneksi, "SELECT count(id_hasil) as c1 FROM data_hasil WHERE Cluster = 'Cluster-1'");
@@ -32,7 +32,7 @@
           </div>
         </div>
         <div class="col-lg-3 col-4">
-          <div class="small-box bg-success">
+          <div class="small-box bg-warning">
             <div class="inner">
               <?php
               $query = mysqli_query($koneksi, "SELECT count(id_hasil) as c2 FROM data_hasil WHERE Cluster = 'Cluster-2'");
@@ -48,7 +48,7 @@
           </div>
         </div>
         <div class="col-lg-3 col-4">
-          <div class="small-box bg-warning">
+          <div class="small-box bg-success">
             <div class="inner">
               <?php
               $query = mysqli_query($koneksi, "SELECT count(id_hasil) as c3 FROM data_hasil WHERE Cluster = 'Cluster-3'");
@@ -63,38 +63,9 @@
             <a href="data_hasil.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
-        <div class="col-lg-3 col-4">
-          <div class="small-box bg-danger">
-            <div class="inner">
-              <?php
-              $query = mysqli_query($koneksi, "SELECT count(id_hasil) as c4 FROM data_hasil WHERE Cluster = 'Cluster-4'");
-              $data  = mysqli_fetch_array($query);
-              ?>
-              <h3><?= $data['c4'] ?></h3>
-              <p><?= $ArrayNamaCluster[3] ?></p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-stats-bars"></i>
-            </div>
-            <a href="data_hasil.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-          </div>
+        
         </div>
-        <div class="col-lg-3 col-3">
-          <div class="small-box bg-primary">
-            <div class="inner">
-              <?php
-              $query = mysqli_query($koneksi, "SELECT count(id_hasil) as c5 FROM data_hasil WHERE Cluster = 'Cluster-5'");
-              $data  = mysqli_fetch_array($query);
-              ?>
-              <h3><?= $data['c5'] ?></h3>
-              <p><?= $ArrayNamaCluster[4] ?></p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-stats-bars"></i>
-            </div>
-            <a href="data_hasil.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
+        
       </div>
 
       <!-- Default box -->
@@ -111,7 +82,7 @@
           </div>
         </div>
         <div class="box-body">
-          <div style="width: 800px;margin: 0px auto;">
+          <div style="width: 700px;margin: 0px auto;">
     <canvas id="myChart"></canvas>
   </div>
         </div>
@@ -134,7 +105,7 @@
     var myChart = new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: ["TKJ", "Otomotif", "Tata Boga", "Wirausaha / Pemasaran", "Pertanian"],
+        labels: ["Berbahaya", "Waspada", "Aman"],
         datasets: [{
           label: '',
           data: [
@@ -150,26 +121,16 @@
           $jumlah3 = mysqli_query($koneksi,"SELECT * FROM data_hasil WHERE Cluster='Cluster-3'");
           echo mysqli_num_rows($jumlah3);
           ?>, 
-          <?php 
-          $jumlah4 = mysqli_query($koneksi,"SELECT * FROM data_hasil WHERE Cluster='Cluster-4'");
-          echo mysqli_num_rows($jumlah4);
-          ?>,
-          <?php 
-          $jumlah5 = mysqli_query($koneksi,"SELECT * FROM data_hasil WHERE Cluster='Cluster-5'");
-          echo mysqli_num_rows($jumlah5);
-          ?>
           ],
           backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
           'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)'
+          'rgba(255, 206, 86, 0.2)'
           ],
           borderColor: [
           'rgba(255,99,132,1)',
           'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)'
+          'rgba(255, 206, 86, 1)'
           ],
           borderWidth: 1
         }]

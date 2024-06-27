@@ -105,17 +105,17 @@ include 'src/header.php';
                 <thead>
                   <tr>
                     <th>#</th>
-                    <th>NIS</th>
+                    <th>ID Penyakit</th>
                     <th>C1</th>
                     <th>C2</th>
                     <th>C3</th>
                     <th>C4</th>
                     <th>C5</th>
+                    <th>C6</th>
+                    <th>C7</th>
                     <th>Clus 1</th>
                     <th>Clus 2</th>
                     <th>Clus 3</th>
-                    <th>Clus 4</th>
-                    <th>Clus 5</th>
                     <th>Cluster</th>
                   </tr>
                 </thead>
@@ -125,11 +125,11 @@ include 'src/header.php';
                     while ($row = mysqli_fetch_array($resultat)) {
                       $temp_cluster = array();
                       for ($j=0; $j < $n_cluster; $j++) {
-                        $nilai_cluster = sqrt(pow(($row['c1']-$centroid[$j]['c1']), 2)+pow(($row['c2']-$centroid[$j]['c2']), 2)+pow(($row['c3']-$centroid[$j]['c3']), 2)+pow(($row['c4']-$centroid[$j]['c4']), 2)+pow(($row['c5']-$centroid[$j]['c5']), 2));
+                        $nilai_cluster = sqrt(pow(($row['c1']-$centroid[$j]['c1']), 2)+pow(($row['c2']-$centroid[$j]['c2']), 2)+pow(($row['c3']-$centroid[$j]['c3']), 2)+pow(($row['c4']-$centroid[$j]['c4']), 2)+pow(($row['c5']-$centroid[$j]['c5']), 2)+pow(($row['c6']-$centroid[$j]['c6']), 2)+pow(($row['c7']-$centroid[$j]['c7']), 2));
                         $temp_cluster['Cluster-'.($j+1)] = $nilai_cluster;
                       }
 
-                      $my_cluster = array($temp_cluster['Cluster-1'], $temp_cluster['Cluster-2'], $temp_cluster['Cluster-3'], $temp_cluster['Cluster-4'], $temp_cluster['Cluster-5']);
+                      $my_cluster = array($temp_cluster['Cluster-1'], $temp_cluster['Cluster-2'], $temp_cluster['Cluster-3']);
                       sort($my_cluster);
 
 
@@ -149,11 +149,11 @@ include 'src/header.php';
                     <td><?= $row['c3'] ?></td>
                     <td><?= $row['c4'] ?></td>
                     <td><?= $row['c5'] ?></td>
+                    <td><?= $row['c6'] ?></td>
+                    <td><?= $row['c7'] ?></td>
                     <th><?php echo $temp_cluster['Cluster-1'] ?></th>
                     <th><?php echo $temp_cluster['Cluster-2'] ?></th>
                     <th><?php echo $temp_cluster['Cluster-3'] ?></th>
-                    <th><?php echo $temp_cluster['Cluster-4'] ?></th>
-                    <th><?php echo $temp_cluster['Cluster-5'] ?></th>
                     <th><?php echo $cluster ?></th>
                   </tr>
                   <?php

@@ -28,24 +28,25 @@
  
 	<?php
 	header("Content-type: application/vnd-ms-excel");
-	header("Content-Disposition: attachment; filename=Data Hasil Penentuan Jurusan.xls");
+	header("Content-Disposition: attachment; filename=Data Hasil PenentuanCluster.xls");
 	?>
  
 	<center>
-		<h1>DATA HASIL PENENTUAN JURUSAN SMKN 1 MUARO JAMBI</h1>
+		<h1>DATA HASIL PENENTUAN KLUSTER PENYAKIT PUSKESMAS NGEMPLAK</h1>
 	</center>
  
 	<table border="1">
 		<tr>
-			<th>#</th>
-            <th>NIS</th>
-            <th>Nama Siswa</th>
-            <th>B INDO</th>
-            <th>B INGGRIS</th>
-            <th>MTK</th>
-            <th>FISIKA</th>
-            <th>BIOLOGI</th>
-            <th>Jurusan</th>
+        <th>#</th>
+                  <th>Nama Cluster</th>
+                  <th>0-11 tahun</th>
+                  <th>12-24 tahun</th>
+                  <th>25-45 tahun</th>
+                  <th>45-65 tahun</th>
+                  <th>> 65 tahun</th>
+                  <th>Perempuan</th>
+                  <th>Laki-laki</th>
+            <th>Kategori</th>
         </tr>
         <?php
         $no = 1;
@@ -63,10 +64,6 @@
                 $jurusan = $ArrayNamaCluster[1];
             }elseif($data['Cluster'] == "Cluster-3"){
                 $jurusan = $ArrayNamaCluster[2];
-            }elseif($data['Cluster'] == "Cluster-4"){
-                $jurusan = $ArrayNamaCluster[3];
-            }elseif($data['Cluster'] == "Cluster-5"){
-                $jurusan = $ArrayNamaCluster[4];
             }
         ?>
         <tr>
@@ -78,6 +75,8 @@
             <td><?= $data['c3'] ?></td>
             <td><?= $data['c4'] ?></td>
             <td><?= $data['c5'] ?></td>
+            <td><?= $data['c6'] ?></td>
+            <td><?= $data['c7'] ?></td>
             <td><?= $jurusan ?></td>
         </tr>
         <?php } ?>

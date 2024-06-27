@@ -20,7 +20,7 @@ include 'src/header.php';
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
-          <h3 class="box-title">Data Siswa</h3>
+          <h3 class="box-title">Data Penyakit</h3>
 
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"> <i class="fa fa-minus"></i></button>
@@ -33,9 +33,9 @@ include 'src/header.php';
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>NIS</th>
-                  <th>Nama Siswa</th>
-                  <th>Alamat</th>
+                  <th>ID Penyakit</th>
+                  <th>Nama Penyakit</th>
+                  <th>Deskripsi Penyakit</th>
                   <th>Password</th>
                   <th>Aksi</th>
                 </tr>

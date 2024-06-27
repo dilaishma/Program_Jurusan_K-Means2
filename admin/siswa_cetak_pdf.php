@@ -11,7 +11,7 @@ $pdf->AddPage();
 $pdf->SetFont('Times','B',12);
 $pdf->Image('../logo1.png',1,1,2,2);
 $pdf->SetX(4);            
-$pdf->MultiCell(19.5,0.5,'LAPORAN DATA SISWA',0,'L');    
+$pdf->MultiCell(19.5,0.5,'LAPORAN DATA PENYAKIT',0,'L');    
 $pdf->SetFont('Arial','B',10);
 $pdf->SetX(4);
 $pdf->MultiCell(19.5,0.5,'Telpon : 085896214769 ',0,'L');
@@ -24,19 +24,19 @@ $pdf->Line(1,3.2,28.5,3.2);
 $pdf->SetLineWidth(0);
 $pdf->ln(1);
 $pdf->SetFont('Arial','B',14);
-$pdf->Cell(0,0.7,'Laporan data Siswa',0,0,'C');
+$pdf->Cell(0,0.7,'Laporan data Penyakit',0,0,'C');
 $pdf->ln(1);
 $pdf->SetFont('Arial','B',10);
 $pdf->Cell(5,0.7,"Di cetak pada : ".date("D-d/m/Y"),0,0,'C');
 $pdf->ln(1);
 $pdf->SetFont('Arial','B',8);
-$pdf->Cell(2.5, 0.8, 'NIS', 1, 0, 'C');
-$pdf->Cell(6, 0.8, 'Nama', 1, 0, 'C');
-$pdf->Cell(3, 0.8, 'B INDO', 1, 0, 'C');
-$pdf->Cell(3, 0.8, 'B INGGRIS', 1, 0, 'C');
-$pdf->Cell(3, 0.8, 'MTK', 1, 0, 'C');
-$pdf->Cell(4, 0.8, 'FISIKA', 1, 0, 'C');
-$pdf->Cell(4, 0.8, 'BIOLOGI', 1, 0, 'C');
+$pdf->Cell(2.5, 0.8, 'ID Penyakit', 1, 0, 'C');
+$pdf->Cell(6, 0.8, 'Nama Penyakit', 1, 0, 'C');
+$pdf->Cell(3, 0.8, 'Jumlah Usia 0-11 tahun', 1, 0, 'C');
+$pdf->Cell(3, 0.8, 'Jumlah Usia 12-25 tahun', 1, 0, 'C');
+$pdf->Cell(3, 0.8, 'Jumlah Usia 26-45 tahun', 1, 0, 'C');
+$pdf->Cell(4, 0.8, 'Jumlah Usia 46-65 tahun', 1, 0, 'C');
+$pdf->Cell(4, 0.8, 'Jumlah Usia > 65 tahun', 1, 0, 'C');
 $pdf->ln();
 
 $no=1;
@@ -61,7 +61,7 @@ $pdf->MultiCell(19.2,0.5,'ARNOL ARJANSYAH',5,'R');
 $pdf->SetFont('Arial','B',10);
 $pdf->SetX(6);
 
-$pdf->Output("laporan_data_siswa.pdf","I");
+$pdf->Output("laporan_data_penyakit.pdf","I");
 
 ?>
 

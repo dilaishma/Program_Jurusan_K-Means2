@@ -20,7 +20,7 @@
         <!-- Default box -->
         <div class="box">
           <div class="box-header with-border">
-            <h3 class="box-title">Laporan Siswa</h3>
+            <h3 class="box-title">Laporan Data Penyakit</h3>
 
             <div class="box-tools pull-right">
               <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"> <i class="fa fa-minus"></i></button>
@@ -31,22 +31,23 @@
             <a href="siswa_cetak_excel.php" target="_blank()" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm">
               <i class="fas fa-sm text-white-50"></i>Export to Excel
             </a>
-            <a href="siswa_cetak_pdf.php" target="_blank()" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm">
+            <!-- <a href="siswa_cetak_pdf.php" target="_blank()" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm">
               <i class="fas fa-sm text-white-50"></i>Export to PDF
-            </a>
+            </a> -->
             <hr>
             <div class="table-responsive">
               <table class="table table-bordered" id="example1" width="100%" cellspacing="0">
                 <thead>
                   <tr>
-                    <th>#</th>
-                    <th>NIS</th>
-                    <th>Nama Siswa</th>
-                    <th>B INDO</th>
-                    <th>B INGGRIS</th>
-                    <th>MTK</th>
-                    <th>FISIKA</th>
-                    <th>BIOLOGI</th>
+                  <th>#</th>
+                  <th>Nama Cluster</th>
+                  <th>0-11 tahun</th>
+                  <th>12-24 tahun</th>
+                  <th>25-45 tahun</th>
+                  <th>45-65 tahun</th>
+                  <th>> 65 tahun</th>
+                  <th>Perempuan</th>
+                  <th>Laki-laki</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -64,6 +65,8 @@
                     <td><?= $data['c3'] ?></td>
                     <td><?= $data['c4'] ?></td>
                     <td><?= $data['c5'] ?></td>
+                    <td><?= $data['c6'] ?></td>
+                    <td><?= $data['c7'] ?></td>
                   </tr>
                   <?php } ?>
                 </tbody>

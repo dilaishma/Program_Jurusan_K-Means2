@@ -25,7 +25,7 @@ $query_total_data = mysqli_query($koneksi, "SELECT COUNT(*) as SIZE FROM data_ni
     }else{
       //MENCARI/MENGHITUNG TITIK PUSAT(CENTROID) BARU
       for ($j=0; $j < $n_cluster; $j++) {
-        $query_centroid = "SELECT data_nilai.*, data_hasil.*, AVG(data_nilai.c1) as 'c1', AVG(data_nilai.c2) as 'c2', AVG(data_nilai.c3) as 'c3', AVG(data_nilai.c4) as 'c4', AVG(data_nilai.c5) as 'c5' FROM data_hasil, data_nilai WHERE data_hasil.id_nilai = data_nilai.id_nilai AND data_hasil.Cluster = 'Cluster-".($j+1)."'";
+        $query_centroid = "SELECT data_nilai.*, data_hasil.*, AVG(data_nilai.c1) as 'c1', AVG(data_nilai.c2) as 'c2', AVG(data_nilai.c3) as 'c3', AVG(data_nilai.c4) as 'c4', AVG(data_nilai.c5) as 'c5', AVG(data_nilai.c5) as 'c6', AVG(data_nilai.c5) as 'c7' FROM data_hasil, data_nilai WHERE data_hasil.id_nilai = data_nilai.id_nilai AND data_hasil.Cluster = 'Cluster-".($j+1)."'";
         $resultat_centroid = mysqli_query($koneksi, $query_centroid) or die(mysqli_error($koneksi));
         while ($row_centroid = mysqli_fetch_array($resultat_centroid)) {
           array_push($centroid, $row_centroid);
@@ -38,11 +38,11 @@ $query_total_data = mysqli_query($koneksi, "SELECT COUNT(*) as SIZE FROM data_ni
     while ($row = mysqli_fetch_array($resultat)) {
       $temp_cluster = array();
       for ($j=0; $j < $n_cluster; $j++) {
-        $nilai_cluster = sqrt(pow(($row['c1']-$centroid[$j]['c1']), 2)+pow(($row['c2']-$centroid[$j]['c2']), 2)+pow(($row['c3']-$centroid[$j]['c3']), 2)+pow(($row['c4']-$centroid[$j]['c4']), 2)+pow(($row['c5']-$centroid[$j]['c5']), 2));
+        $nilai_cluster = sqrt(pow(($row['c1']-$centroid[$j]['c1']), 2)+pow(($row['c2']-$centroid[$j]['c2']), 2)+pow(($row['c3']-$centroid[$j]['c3']), 2)+pow(($row['c4']-$centroid[$j]['c4']), 2)+pow(($row['c5']-$centroid[$j]['c5']), 2)+pow(($row['c6']-$centroid[$j]['c6']), 2)+pow(($row['c7']-$centroid[$j]['c7']), 2));
         $temp_cluster['Cluster-'.($j+1)] = $nilai_cluster;
       }
 
-      $my_cluster = array($temp_cluster['Cluster-1'], $temp_cluster['Cluster-2'], $temp_cluster['Cluster-3'], $temp_cluster['Cluster-4'], $temp_cluster['Cluster-5']);
+      $my_cluster = array($temp_cluster['Cluster-1'], $temp_cluster['Cluster-2'], $temp_cluster['Cluster-3']);
       sort($my_cluster);
 
 
@@ -117,7 +117,7 @@ $query_total_data = mysqli_query($koneksi, "SELECT COUNT(*) as SIZE FROM data_ni
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
-          <h3 class="box-title">Data Hasil Penentuan Jurusan</h3>
+          <h3 class="box-title">Data Hasil Penentuan Cluster</h3>
 
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"> <i class="fa fa-minus"></i></button>
@@ -129,15 +129,17 @@ $query_total_data = mysqli_query($koneksi, "SELECT COUNT(*) as SIZE FROM data_ni
             <table class="table table-bordered" id="example1" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th>#</th>
-                  <th>NIS</th>
-                  <th>Nama Siswa</th>
-                  <th>B INDO</th>
-                  <th>B INGGRIS</th>
-                  <th>MTK</th>
-                  <th>FISIKA</th>
-                  <th>BIOLOGI</th>
-                  <th>Jurusan</th>
+                <th>#</th>
+                <th>ID Penyakit</th>
+                  <th>Nama Cluster</th>
+                  <th>0-11 tahun</th>
+                  <th>12-24 tahun</th>
+                  <th>25-45 tahun</th>
+                  <th>45-65 tahun</th>
+                  <th>> 65 tahun</th>
+                  <th>Perempuan</th>
+                  <th>Laki-laki</th>
+                  <th>Kategori</th>
                 </tr>
               </thead>
               <tbody>
@@ -151,10 +153,6 @@ $query_total_data = mysqli_query($koneksi, "SELECT COUNT(*) as SIZE FROM data_ni
                       $jurusan = $ArrayNamaCluster[1];
                     }elseif($data['Cluster'] == "Cluster-3"){
                       $jurusan = $ArrayNamaCluster[2];
-                    }elseif($data['Cluster'] == "Cluster-4"){
-                      $jurusan = $ArrayNamaCluster[3];
-                    }elseif($data['Cluster'] == "Cluster-5"){
-                      $jurusan = $ArrayNamaCluster[4];
                     }
                 ?>
                 <tr>
@@ -166,6 +164,8 @@ $query_total_data = mysqli_query($koneksi, "SELECT COUNT(*) as SIZE FROM data_ni
                   <td><?= $data['c3'] ?></td>
                   <td><?= $data['c4'] ?></td>
                   <td><?= $data['c5'] ?></td>
+                  <td><?= $data['c6'] ?></td>
+                  <td><?= $data['c7'] ?></td>
                   <td><?= $jurusan ?></td>
                 </tr>
                 <?php } ?>

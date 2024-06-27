@@ -45,7 +45,7 @@ if(isset($_POST['login'])){
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Penentuan jurusan pada SMKN 1 muaro jambi dengan menggunakan metode k-means clustering</title>
+  <title>Clustering K-means Data Penyakit Pasien</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -151,7 +151,7 @@ if(isset($_POST['login'])){
         <strong><span>K-MEANS CLUSTERING</span></strong>.
       </div>
       <div class="credits">
-        <a href="index.php">PENENTUAN JURUSAN PADA SMKN 1 MUARO JAMBI</a>
+        <a href="index.php">CLUSTERING DATA PENYAKIT</a>
       </div>
     </div>
   </footer><!-- End Footer -->

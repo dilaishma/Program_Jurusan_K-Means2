@@ -34,11 +34,13 @@ include 'src/header.php';
                 <tr>
                   <th>#</th>
                   <th>Nama Cluster</th>
-                  <th>B INDO</th>
-                  <th>B INGGRIS</th>
-                  <th>MTK</th>
-                  <th>FISIKA</th>
-                  <th>BIOLOGI</th>
+                  <th>0-11 tahun</th>
+                  <th>12-24 tahun</th>
+                  <th>25-45 tahun</th>
+                  <th>45-65 tahun</th>
+                  <th>> 65 tahun</th>
+                  <th>Perempuan</th>
+                  <th>Laki-laki</th>
                   <th>Aksi</th>
                 </tr>
               </thead>
@@ -56,6 +58,8 @@ include 'src/header.php';
                   <td><?= $data['c3'] ?></td>
                   <td><?= $data['c4'] ?></td>
                   <td><?= $data['c5'] ?></td>
+                  <td><?= $data['c6'] ?></td>
+                  <td><?= $data['c7'] ?></td>
                   <td>
                     <a href="cluster_edit.php?id_cluster=<?php echo $data['id_cluster']; ?>"><button type="button" class='d-sm-inline-block btn btn-sm btn-primary shadow-sm'><span aria-hidden="true"></span>Edit</button></a>
                   </td>

@@ -33,9 +33,9 @@ include 'src/header.php';
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>NIS</th>
-                  <th>Nama Siswa</th>
-                  <th>Alamat</th>
+                  <th>ID Penyakit</th>
+                  <th>Nama Penyakit</th>
+                  <th>Deskripsi Penyakit</th>
                   <th>Password</th>
                   <th><a href="siswa_tambah.php"><button type="button" class='d-sm-inline-block btn btn-sm btn-success shadow-sm'><span aria-hidden="true"></span>Tambah</button></a></th>
                 </tr>

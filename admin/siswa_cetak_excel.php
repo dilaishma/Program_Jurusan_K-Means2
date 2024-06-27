@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Penentuan jurusan pada SMKN 1 muaro jambi dengan menggunakan metode k-means clustering</title>
+	<title>Penentuan kategori penyakit dengan menggunakan metode k-means clustering</title>
 </head>
 <body>
 	<style type="text/css">
@@ -32,19 +32,20 @@
 	?>
  
 	<center>
-		<h1>DATA SISWA SMKN 1 MUARO JAMBI</h1>
+		<h1>DATA PENYAKIT PASIEN RAWAT JALAN PUSKESMAS NGEMPLAK, BOYOLALI</h1>
 	</center>
  
 	<table border="1">
 		<tr>
-			<th>#</th>
-            <th>NIS</th>
-            <th>Nama Siswa</th>
-            <th>B INDO</th>
-            <th>B INGGRIS</th>
-            <th>MTK</th>
-            <th>FISIKA</th>
-            <th>BIOLOGI</th>
+		<th>#</th>
+                  <th>Nama Cluster</th>
+                  <th>0-11 tahun</th>
+                  <th>12-24 tahun</th>
+                  <th>25-45 tahun</th>
+                  <th>45-65 tahun</th>
+                  <th>> 65 tahun</th>
+                  <th>Perempuan</th>
+                  <th>Laki-laki</th>
         </tr>
         <?php
         $no = 1;
@@ -61,6 +62,8 @@
             <td><?= $data['c3'] ?></td>
             <td><?= $data['c4'] ?></td>
             <td><?= $data['c5'] ?></td>
+			<td><?= $data['c6'] ?></td>
+			<td><?= $data['c7'] ?></td>
         </tr>
         <?php } ?>
 	</table>
