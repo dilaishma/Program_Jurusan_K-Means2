@@ -63,7 +63,7 @@ if (isset($_POST['simpan'])) {
         <!-- Default box -->
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title">Tambah Data Siswa</h3>
+                <h3 class="box-title">Tambah Data Penyakit</h3>
                 <?php
                 $id = $_GET['nis'];
                 $query = mysqli_query($koneksi, "SELECT data_nilai.*, data_siswa.* FROM data_nilai, data_siswa WHERE data_nilai.nis = data_siswa.nis AND data_siswa.nis = '$id'");
@@ -78,24 +78,24 @@ if (isset($_POST['simpan'])) {
                 <form action="" method="POST">
                     <table class="table table-bordered" id="example1" width="100%" cellspacing="0">
                         <tr bgcolor="#6699FF">
-                            <td><h4 align="center">DATA DIRI SISWA</h4></tr>
+                            <td><h4 align="center">DATA PENYAKIT</h4></tr>
                     </table>
                     <table class="table table-no-bordered" id="example1" width="100%" cellspacing="0">
-                        <tr><td>NISN : <input type="number" name="nis" class="form-control" value="<?= $data['nis'] ?>"></td></tr>
-                        <tr><td>Nama Lengkap : <input type="text" onkeypress="return event.charCode < 48 || event.charCode > 57" name="nama_siswa" class="form-control" value="<?= $data['nama_siswa'] ?>" placeholder="Masukan Nama Siswa" required></td></tr>
-                        <tr><td>Alamat : <input type="text" name="alamat_siswa" class="form-control" value="<?= $data['alamat_siswa'] ?>" placeholder="Masukan Alamat Siswa" required></td></tr>
+                        <tr><td>ID Penyakit : <input type="number" name="nis" class="form-control" value="<?= $data['nis'] ?>"></td></tr>
+                        <tr><td>Nama Penyakit : <input type="text" onkeypress="return event.charCode < 48 || event.charCode > 57" name="nama_siswa" class="form-control" value="<?= $data['nama_siswa'] ?>" placeholder="Masukan Nama Siswa" required></td></tr>
+                        <tr><td>Dekripsi Penyakit : <input type="text" name="alamat_siswa" class="form-control" value="<?= $data['alamat_siswa'] ?>" placeholder="Masukan Alamat Siswa" required></td></tr>
                     </table>
                     <table class="table table-bordered" id="example1" width="100%" cellspacing="0">
                         <tr bgcolor="#6699FF">
-                            <td><h4 align="center">DATA NILAI SISWA</h4></tr>
+                            <td><h4 align="center">DETAIL DATA PENYAKIT</h4></tr>
                     </table>
                     <table class="table table-no-bordered" id="example1" width="100%" cellspacing="0">
                         <tr>
-                            <td>NILAI BAHASA INDONESIA : <input type="number" name="c1" class="form-control" value="<?= $data['c1'] ?>" autocomplete="off" placeholder="Masukan NILAI BAHASA INDONESIA" required></td>
-                            <td>NILAI BAHASA INGGRIS : <input type="number" name="c2" class="form-control" value="<?= $data['c2'] ?>" placeholder="Masukan NILAI BAHASA INGGRIS" required></td>
-                            <td>NILAI MATEMATIKA : <input type="number" name="c3" class="form-control" value="<?= $data['c3'] ?>" placeholder="Masukan NILAI MATEMATIKA" required></td>
-                            <td>NILAI FISIKA : <input type="number" name="c4" class="form-control" value="<?= $data['c4'] ?>" placeholder="Masukan NILAI FISIKA" required></td>
-                            <td>NILAI BIOLOGI : <input type="number" name="c5" class="form-control" value="<?= $data['c5'] ?>" placeholder="Masukan NILAI BIOLOGI" required></td>
+                            <td>Jumlah Usia 1-11 tahun : <input type="number" name="c1" class="form-control" value="<?= $data['c1'] ?>" autocomplete="off" placeholder="Masukan Jumlah Usia 1-11 tahun : " required></td>
+                            <td>Jumlah Usia 12-24 tahun : <input type="number" name="c2" class="form-control" value="<?= $data['c2'] ?>" placeholder="Masukan Jumlah Usia 12-24 tahun : " required></td>
+                            <td>Jumlah Usia 24-45 tahun :  <input type="number" name="c3" class="form-control" value="<?= $data['c3'] ?>" placeholder="Masukan Jumlah Usia 25-45 tahun : " required></td>
+                            <td>Jumlah Usia 45-64 tahun :  <input type="number" name="c4" class="form-control" value="<?= $data['c4'] ?>" placeholder="Masukan Jumlah Usia 45-64 tahun : " required></td>
+                            <td>Jumlah Usia > 65 tahun :  <input type="number" name="c5" class="form-control" value="<?= $data['c5'] ?>" placeholder="Masukan Jumlah Usia >65 tahun : " required></td>
                         </tr>
                     </table>
                     <div class="form-group">

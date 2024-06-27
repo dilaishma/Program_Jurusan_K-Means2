@@ -80,7 +80,7 @@ if(isset($_POST['simpan'])){
     <!-- Default box -->
     <div class="box">
       <div class="box-header with-border">
-        <h3 class="box-title">Tambah Data Siswa</h3>
+        <h3 class="box-title">Tambah Data Penyakit</h3>
 
         <div class="box-tools pull-right">
           <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -94,23 +94,23 @@ if(isset($_POST['simpan'])){
       <div class="box-body">
         <form action="" method="POST">
           <table class="table table-bordered" id="example1" width="100%" cellspacing="0">
-            <tr bgcolor="#6699FF"><td><h4 align="center">DATA DIRI SISWA</h4></tr>
+            <tr bgcolor="#6699FF"><td><h4 align="center">DATA PENYAKIT</h4></tr>
           </table>
           <table class="table table-no-bordered" id="example1" width="100%" cellspacing="0">
-            <tr><td>NISN : <input type="text" name="nis" class="form-control" placeholder="Masukan NISN Siswa" required></td></tr>
-            <tr><td>Nama Lengkap : <input type="text" onkeypress="return event.charCode < 48 || event.charCode  >57" name="nama_siswa" class="form-control" placeholder="Masukan Nama Siswa" required></td></tr>
-            <tr><td>Alamat : <input type="text" name="alamat_siswa" class="form-control" placeholder="Masukan Alamat Siswa" required></td></tr>
+            <tr><td>ID Penyakit<input type="text" name="nis" class="form-control" placeholder="Masukan ID Penyakit" required></td></tr>
+            <tr><td>Nama Penyakit: <input type="text" onkeypress="return event.charCode < 48 || event.charCode  >57" name="nama_siswa" class="form-control" placeholder="Masukan Nama Penyakit" required></td></tr>
+            <tr><td>Deskripsi : <input type="text" name="alamat_siswa" class="form-control" placeholder="Masukan Deskripsi Penyakit" required></td></tr>
           </table>
           <table class="table table-bordered" id="example1" width="100%" cellspacing="0">
-            <tr bgcolor="#6699FF"><td><h4 align="center">DATA NILAI SISWA</h4></tr>
+            <tr bgcolor="#6699FF"><td><h4 align="center">DETAIL DATA PENYAKIT</h4></tr>
           </table>
           <table class="table table-no-bordered" id="example1" width="100%" cellspacing="0">
             <tr>
-              <td>NILAI BAHASA INDONESIA : <input type="number" min="0" max="100" name="c1" class="form-control" autocomplete="off" placeholder="Masukan NILAI BAHASA INDONESIA" required></td>
-              <td>NILAI BAHASA INGGRIS : <input type="number" min="0" max="100" name="c2" class="form-control" placeholder="Masukan NILAI BAHASA INGGRIS" required></td>
-              <td>NILAI MATEMATIKA : <input type="number" min="0" max="100" name="c3" class="form-control" placeholder="Masukan NILAI MATEMATIKA" required></td>
-              <td>NILAI FISIKA : <input type="number" min="0" max="100" name="c4" class="form-control" placeholder="Masukan NILAI FISIKA" required></td>
-              <td>NILAI BIOLOGI : <input type="number" min="0" max="100" name="c5" class="form-control" placeholder="Masukan NILAI BIOLOGI" required></td>
+              <td>Jumlah Usia 1-11 tahun : <input type="number" min="0" max="1000" name="c1" class="form-control" autocomplete="off" placeholder="Masukan Jumlah Usia 1-11 tahun :" required></td>
+              <td>Jumlah Usia 12-24 tahun : <input type="number" min="0" max="1000" name="c2" class="form-control" placeholder="Masukan Jumlah Usia 12-24 tahun :" required></td>
+              <td>Jumlah Usia 25-45 tahun : <input type="number" min="0" max="1000" name="c3" class="form-control" placeholder="Masukan Jumlah Usia 25-45 tahun :" required></td>
+              <td>Jumlah Usia 46 - 65 tahun : <input type="number" min="0" max="1000" name="c4" class="form-control" placeholder="Masukan Jumlah Usia 46-65 tahun :" required></td>
+              <td>Jumlah Usia > 65 tahun : <input type="number" min="0" max="1000" name="c5" class="form-control" placeholder="Masukan Jumlah Usia > 65 tahun :" required></td>
             </tr>
           </table>
           <div class="form-group">
