@@ -32,7 +32,7 @@ include 'src/header.php';
             $query_total_data = mysqli_query($koneksi, "SELECT COUNT(*) as SIZE FROM data_nilai");
             $n_iterasi = 100;
             $n_data = mysqli_fetch_array($query_total_data)['SIZE'];
-            $n_cluster = 5;
+            $n_cluster = 3;
             $old_iterasi = array();
                     
             for ($i=0; $i < $n_iterasi; $i++) { 
@@ -68,6 +68,8 @@ include 'src/header.php';
                 <th><?php echo $row['c3'] ?></th>
                 <th><?php echo $row['c4'] ?></th>
                 <th><?php echo $row['c5'] ?></th>
+                <th><?php echo $row['c6'] ?></th>
+                <th><?php echo $row['c7'] ?></th>
               </tr>
               <?php } $index_centroid++; } ?>
             </table>
@@ -91,6 +93,9 @@ include 'src/header.php';
                 <th><?php echo $row_centroid['c3'] ?></th>
                 <th><?php echo $row_centroid['c4'] ?></th>
                 <th><?php echo $row_centroid['c5'] ?></th>
+                <th><?php echo $row_centroid['c6'] ?></th>
+                <th><?php echo $row_centroid['c7'] ?></th>
+
               </tr>
               <?php } } ?>
             </table>

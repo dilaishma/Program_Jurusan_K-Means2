@@ -40,7 +40,8 @@
                 <thead>
                   <tr>
                   <th>#</th>
-                  <th>Nama Cluster</th>
+                  <th>ID Penyakit</th>
+                  <th>Nama Penyakit</th>
                   <th>0-11 tahun</th>
                   <th>12-24 tahun</th>
                   <th>25-45 tahun</th>
