@@ -75,15 +75,15 @@ while($dataNamaCluster = mysqli_fetch_array($queryNamaCluster)){
         <ul class="nav navbar-nav">
           <li class="dropdown user user-menu">
             <a href="data_admin.php" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="../user-3.jpg" class="user-image" alt="User Image">
+              <img src="../logo1.png" class="user-image" alt="User Image">
               <span class="hidden-xs"><?= $dt['nama_admin'] ?></span>
             </a>
             <ul class="dropdown-menu">
               <li class="user-header">
-                <img src="../user-6.jpg" class="img-circle" alt="User Image">
+                <img src="../logo1.png" class="img-circle" alt="User Image">
                 <p>
-                  <?= $dt['nama_admin'] ?> - Informatika
-                  <small>NIM : 1802023 </small>
+                  <?= $dt['nama_admin'] ?> - Puskesmas
+                  <small>Ngemplak Boyolali</small>
                 </p>
               </li>
               <li class="user-footer">
@@ -105,7 +105,7 @@ while($dataNamaCluster = mysqli_fetch_array($queryNamaCluster)){
     <section class="sidebar">
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="../smk1.png" class="img-circle" alt="User Image">
+          <img src="../logo1.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p><?= $dt['nama_admin'] ?></p>
