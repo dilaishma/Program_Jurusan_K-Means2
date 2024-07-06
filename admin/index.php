@@ -105,7 +105,7 @@
     var myChart = new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: ["Berbahaya", "Waspada", "Aman"],
+        labels: ["Aman", "Waspada", "Berbahaya"],
         datasets: [{
           label: '',
           data: [
