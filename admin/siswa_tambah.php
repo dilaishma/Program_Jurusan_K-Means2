@@ -34,7 +34,7 @@ if(isset($_POST['simpan'])){
     $c4 = mysqli_real_escape_string($koneksi, $_POST['c4']);
     $c5 = mysqli_real_escape_string($koneksi, $_POST['c5']);
     $c6 = mysqli_real_escape_string($koneksi, $_POST['c6']);
-    $c6 = mysqli_real_escape_string($koneksi, $_POST['c7']);
+    $c7 = mysqli_real_escape_string($koneksi, $_POST['c7']);
     
     // Mulai transaksi
     mysqli_begin_transaction($koneksi);

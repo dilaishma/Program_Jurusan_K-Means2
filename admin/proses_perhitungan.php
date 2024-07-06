@@ -81,6 +81,7 @@ include 'src/header.php';
               <?php
                 //Menghitung centroid baru
                 for ($j=0; $j < $n_cluster; $j++) {
+                  //menghitung dengan rumus k-means
                   $query_centroid = "SELECT data_nilai.*, data_hasil.*, AVG(data_nilai.c1) as 'c1', AVG(data_nilai.c2) as 'c2', AVG(data_nilai.c3) as 'c3', AVG(data_nilai.c4) as 'c4', AVG(data_nilai.c5) as 'c5' FROM data_hasil, data_nilai WHERE data_hasil.id_nilai = data_nilai.id_nilai AND data_hasil.Cluster = 'Cluster-".($j+1)."'";
                   $resultat_centroid = mysqli_query($koneksi, $query_centroid) or die(mysqli_error($koneksi));
                   while ($row_centroid = mysqli_fetch_array($resultat_centroid)) {
@@ -130,6 +131,7 @@ include 'src/header.php';
                     while ($row = mysqli_fetch_array($resultat)) {
                       $temp_cluster = array();
                       for ($j=0; $j < $n_cluster; $j++) {
+                        //mengakses nilai data (row), nilai centroid, menjumlahkan kuadrat selisih
                         $nilai_cluster = sqrt(pow(($row['c1']-$centroid[$j]['c1']), 2)+pow(($row['c2']-$centroid[$j]['c2']), 2)+pow(($row['c3']-$centroid[$j]['c3']), 2)+pow(($row['c4']-$centroid[$j]['c4']), 2)+pow(($row['c5']-$centroid[$j]['c5']), 2)+pow(($row['c6']-$centroid[$j]['c6']), 2)+pow(($row['c7']-$centroid[$j]['c7']), 2));
                         $temp_cluster['Cluster-'.($j+1)] = $nilai_cluster;
                       }
