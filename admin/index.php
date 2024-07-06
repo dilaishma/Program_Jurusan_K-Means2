@@ -16,7 +16,7 @@
       
       <div class="row">
         <div class="col-lg-3 col-4">
-          <div class="small-box bg-danger">
+          <div class="small-box bg-success">
             <div class="inner">
               <?php
               $query = mysqli_query($koneksi, "SELECT count(id_hasil) as c1 FROM data_hasil WHERE Cluster = 'Cluster-1'");
@@ -48,7 +48,7 @@
           </div>
         </div>
         <div class="col-lg-3 col-4">
-          <div class="small-box bg-success">
+          <div class="small-box bg-danger">
             <div class="inner">
               <?php
               $query = mysqli_query($koneksi, "SELECT count(id_hasil) as c3 FROM data_hasil WHERE Cluster = 'Cluster-3'");
